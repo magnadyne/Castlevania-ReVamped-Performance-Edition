@@ -85,8 +85,8 @@
   "swatchColours":null,
   "swfPrecision":2.525,
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"tex_dracula",
+    "path":"texturegroups/tex_dracula",
   },
   "type":0,
   "VTile":false,

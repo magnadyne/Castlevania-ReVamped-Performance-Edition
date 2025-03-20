@@ -82,8 +82,8 @@
   "swatchColours":null,
   "swfPrecision":2.525,
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"tex_bestiary",
+    "path":"texturegroups/tex_bestiary",
   },
   "type":0,
   "VTile":false,

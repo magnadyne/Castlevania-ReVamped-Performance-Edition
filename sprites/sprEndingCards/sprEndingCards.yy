@@ -93,8 +93,8 @@
   "swatchColours":null,
   "swfPrecision":2.525,
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"tex_ending",
+    "path":"texturegroups/tex_ending",
   },
   "type":0,
   "VTile":false,

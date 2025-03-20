@@ -81,8 +81,8 @@
   "swatchColours":null,
   "swfPrecision":2.525,
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"tex_golem",
+    "path":"texturegroups/tex_golem",
   },
   "type":0,
   "VTile":false,

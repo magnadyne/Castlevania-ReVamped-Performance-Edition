@@ -125,8 +125,8 @@
   "swatchColours":null,
   "swfPrecision":2.525,
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"tex_mummy",
+    "path":"texturegroups/tex_mummy",
   },
   "type":0,
   "VTile":false,

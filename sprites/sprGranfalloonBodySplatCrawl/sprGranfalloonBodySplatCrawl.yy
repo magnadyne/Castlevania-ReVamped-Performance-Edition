@@ -141,8 +141,8 @@
   "swatchColours":null,
   "swfPrecision":2.525,
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"tex_legion",
+    "path":"texturegroups/tex_legion",
   },
   "type":0,
   "VTile":false,

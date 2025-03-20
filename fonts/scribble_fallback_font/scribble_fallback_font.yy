@@ -135,8 +135,8 @@
   "size":11.0,
   "styleName":"Regular",
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"tex_unused",
+    "path":"texturegroups/tex_unused",
   },
   "TTFName":"",
   "usesSDF":false,
