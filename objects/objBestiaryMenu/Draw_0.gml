@@ -11,7 +11,7 @@ if menu_width >= 1
 {
 	draw_set_halign(fa_center)
 	draw_set_font(fntMessage)
-	nes_colors()
+	//nes_colors()
 
 	draw_text_outline(xview+200,yview+112-16,c_white,c_black,menu_string)
 	draw_set_halign(fa_left)

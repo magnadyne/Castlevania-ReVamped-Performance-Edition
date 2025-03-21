@@ -5,6 +5,10 @@ global.screen_sprite = 0
 
 cheat_number = 0
 
+depth = -9999;
+
+hud_sprite = [sprHUDBase, sprHUDBase_1, sprHUDBase_2];
+
 global.boss_rush = false
 if room = rmNewBossRush
 	global.boss_rush = true

@@ -1,6 +1,6 @@
 /// @description draw shit
 scrViewData()
-nes_colors()
+//nes_colors()
 depth = -999999
 
 draw_sprite_tiled(sprBlackout,4,xview,yview)

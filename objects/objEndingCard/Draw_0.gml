@@ -2,7 +2,7 @@
 depth = -999999
 draw_self()
 
-nes_colors()
+//nes_colors()
 
 draw_set_halign(fa_center)
 draw_set_font(fntMessage)

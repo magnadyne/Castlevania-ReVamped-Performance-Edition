@@ -1,7 +1,7 @@
 /// @description say the thing
 draw_set_font(fntMessage)
 draw_set_halign(fa_center)
-nes_colors()
+//nes_colors()
 
 if counter < 30 or counter > 270
 	draw_text_outline(200,100,c_navy,c_black,"Excellent! 100% Bestiary Complete!")

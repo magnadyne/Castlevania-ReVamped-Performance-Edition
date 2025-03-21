@@ -1,5 +1,5 @@
 /// @description draw the woooorrrds
-nes_colors()
+//nes_colors()
 draw_set_font(fntCritical)
 draw_set_halign(fa_center)
 depth = -999

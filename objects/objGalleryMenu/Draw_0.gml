@@ -1,5 +1,5 @@
 /// @description draw shit
-nes_colors()
+//nes_colors()
 depth = -999
 
 draw_sprite(sprEndingCardsSmall,0,x - 48,y - 48)

@@ -1,5 +1,6 @@
 /// @description setup shit
 vspeed = -4
+depth = -999
 value = 0
 x += -12 + irandom(24)
 

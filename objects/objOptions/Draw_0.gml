@@ -3,7 +3,7 @@ scrViewData()
 draw_set_font(fntMessage)
 draw_set_halign(fa_left)
 draw_set_color(c_white)
-nes_colors()
+//nes_colors()
 
 vibratetext = "";
 

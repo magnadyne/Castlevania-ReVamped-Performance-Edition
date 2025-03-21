@@ -8,7 +8,7 @@ depth = -999999
 
 draw_set_font(fntMessage)
 
-nes_colors()
+//nes_colors()
 
 draw_set_halign(fa_center)
 

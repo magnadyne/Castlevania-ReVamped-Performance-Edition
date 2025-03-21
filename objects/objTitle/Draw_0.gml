@@ -13,7 +13,7 @@ if selection >= 2
 		title_text = "START\nQUIT"
 }
 
-nes_colors()
+//nes_colors()
 draw_set_halign(fa_center)
 draw_set_font(fntHUD)
 

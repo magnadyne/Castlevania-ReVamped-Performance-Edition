@@ -211,7 +211,11 @@ function scr_OLDTVFilter_Draw() {
 	} else {
 		// Bilinear Filter
 		gpu_set_tex_filter(false);
+		gpu_set_blendenable(false);
+		
 	    draw_surface_stretched(application_surface, 0, 0, surface_width, surface_height);
+		
+		gpu_set_blendenable(true);
 	}
 
 

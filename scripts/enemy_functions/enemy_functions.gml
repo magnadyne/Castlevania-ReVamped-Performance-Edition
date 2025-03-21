@@ -103,15 +103,15 @@ function face_player(tolerance)
 		image_xscale = 1	
 }
 
-function in_view()
-{
-	scrViewData()
+//function in_view()
+//{
+//	scrViewData()
 	
-	if x > xview -16 && x < xview + wview + 16 && y > yview - 8 && y < yview + hview + 8
-		return true;
-	else
-		return false;
-}
+//	if x > xview -16 && x < xview + wview + 16 && y > yview - 8 && y < yview + hview + 8
+//		return true;
+//	else
+//		return false;
+//}
 
 function create_bossbar()
 {

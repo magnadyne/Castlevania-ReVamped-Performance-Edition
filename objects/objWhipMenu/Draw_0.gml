@@ -1,7 +1,7 @@
 /// @description
 depth = -999999
 scrViewData()
-nes_colors()
+//nes_colors()
 
 draw_set_font(fntHUD)
 

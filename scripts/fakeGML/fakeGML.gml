@@ -23,13 +23,13 @@ function sprite_set(sprite, img_speed)
 	image_speed = argument1
 }
 
-function nes_colors()
-{
-	nes_red = make_color_rgb(219,44,1)
-	nes_yellow = make_color_rgb(242,191,63)
-	nes_blue = make_color_rgb(0,116,237)
-	nes_green = make_color_rgb(0,169,2)
-}
+//function nes_colors()
+//{
+//	nes_red = make_color_rgb(219,44,1)
+//	nes_yellow = make_color_rgb(242,191,63)
+//	nes_blue = make_color_rgb(0,116,237)
+//	nes_green = make_color_rgb(0,169,2)
+//}
 
 function draw_text_outline(text_x, text_y, out_color, text_color, String)
 {
@@ -41,7 +41,7 @@ function draw_text_outline(text_x, text_y, out_color, text_color, String)
 	draw_text_scribble(argument0 - 1, argument1 + 1, argument4)
 	draw_text_scribble(argument0, argument1 - 1, argument4)
 	draw_text_scribble(argument0, argument1 + 1, argument4)
-	draw_text_scribble(argument0 - 1, argument1, argument4)
+	//draw_text_scribble(argument0 - 1, argument1, argument4) //Duplicate
 	draw_text_scribble(argument0 + 1, argument1, argument4)
 	draw_text_scribble(argument0 + 1, argument1 + 1, argument4)
 	draw_text_scribble(argument0 + 1, argument1 - 1, argument4)
