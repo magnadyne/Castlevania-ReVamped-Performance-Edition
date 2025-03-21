@@ -114,10 +114,7 @@ function scrPhysicsInit()
 
 function on_ground()
 {
-	if place_meeting(x,y+1,parSolid)
-		return true
-	else
-		return false
+	return place_meeting(x,y+1,parSolid);
 }
 
 function scrDefyPhysics()

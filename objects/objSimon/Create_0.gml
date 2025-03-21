@@ -1,8 +1,11 @@
 /// @description player setup
 scrPhysicsInit()
 reset_palette()
+scrControls()
 if instance_number(objPlayerStalker) == 0
 	instance_create(x,y,objPlayerStalker)
+	
+depth = 0
 
 global.richard = false
 

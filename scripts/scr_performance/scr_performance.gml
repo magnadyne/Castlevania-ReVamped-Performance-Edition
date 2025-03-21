@@ -16,6 +16,17 @@
 }
 #endregion
 
+#region Constants Messages
+{
+	global.message_lifemaxup = @"LIFE MAX UP
+	Maximum HP increased by 1. HP fully restored."
+
+	global.message_waterarmor = @"AQUATIC ARMOR
+	Allows full range of movement in water. Ability to wall-jump, dash and double-jump underwater restored."
+	//These are messages that never change
+}
+#endregion
+
 /*
   Below is a set of functions created to replace pre-existing ones.
   Their purpose is to either improve performance or simplify the code.
@@ -119,4 +130,58 @@ function draw_text_outline_fast(text_x, text_y, out_color, text_color, String)
 	draw_text_color(text_x + 1, text_y - 1, String, out_color, out_color, out_color, out_color, 1);
 
 	draw_text_color(text_x, text_y, String, text_color, text_color, text_color, text_color, 1);
+}
+
+function item_messages()
+{
+	static _icon = -1;
+	var _attack = input_verb_get_icon("attack");
+	
+	if (_icon != _attack)
+	{
+		//Only update the text if the icon has changed
+		
+		_icon = _attack;
+		
+		var _swap = input_verb_get_icon("swap");
+		var _down = input_verb_get_icon("down");
+		var _jump = input_verb_get_icon("jump");
+		//Cache the icons that are used more than once
+		
+		global.message_heartmaxup = @"HEART MAX UP
+		Maximum number of hearts increased by 5. Press " + input_verb_get_icon("subweapon") + " to use sub-weapons."
+
+		global.message_whipaim = @"DYNAMIC STRIKE
+		Aim your whip in 8 directions. Hold a direction and press " + _attack + ". Hold " + input_verb_get_icon("aimlock") + " to prevent movement while aiming."
+
+		global.message_slide = @"BREEZEY SLIDE
+		Pass through tight spaces with an unoffensive slide. Hold " + _down + " and press " + _jump +  " while on the ground. Hold " + _down + " to slide continuously."
+
+		global.message_morningstar = @"MORNING STAR
+		Elongated chain whip that can break certain types of blocks. Press " + _attack +  " to strike with the whip."
+
+		global.message_walljump = @"GRIPPING CLAWS
+		Slides down walls and grants the ability to wall-jump. Press " + _jump +  " while holding a direction against a wall."
+
+		global.message_groundpound = @"BRIDGE SNAPPER
+		Destroy thin blocks with an offensive dive move. Hold " + _down + " and press " + _jump +  " while in the air. A damaging shockwave is released upon landing."
+
+		global.message_flamewhip = @"FLAME WHIP
+		A burning chain whip that deals repetitive damage and destroys certain types of blocks. Hold " + _attack + " to keep whip extended. Press " + _swap + " to swap the current whip."
+
+		global.message_icewhip = @"FROST WHIP
+		An ice-cold chain whip that deals massive damage and destroys certain types of blocks. Press " + _swap + " to swap the current whip."
+
+		global.message_thunderwhip = @"THUNDER WHIP
+		A quick-to-swing electrified chain whip that deals minor damage and destroys certain types of blocks. Press " + _swap + " to swap the current whip."
+
+		global.message_dubblejump = @"LEAP STONE
+		Allows a second jump to be performed. Press " + _jump + " while in midair."
+
+		global.message_dash = @"DASH STONE
+		Grants the ability to perform a gravity-defying dash. Hold " + input_verb_get_icon("dash") + " to use the dash. A dash can be performed endlessly in the air."
+
+		global.message_superslide = @"SPIKED BOOTS
+		A faster slide move with minor offensive capability. Destroys certain kinds of blocks. Hold " + _down + " and press " + _jump +  " while on the ground. Hold " + _down + " to slide continuously."
+	}
 }

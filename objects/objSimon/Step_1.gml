@@ -1,18 +1,12 @@
 /// @description moving vars, water, safe spots
 //safe spots for hazard respawning
-if on_ground() = true && !hurting && !ducking && can_control && i_frames = 0 && !hazard_damage && yspeed = 0 && !place_meeting(x,y,parSolid) && !place_meeting(x,y+1,objConveyorBelt) && !place_meeting(x,y+1,objUnsafeBlock)
+if on_ground() && !hurting && !ducking && can_control && i_frames == 0 && !hazard_damage && yspeed == 0 && !place_meeting(x,y,parSolid) && !place_meeting(x,y+1,objConveyorBelt) && !place_meeting(x,y+1,objUnsafeBlock)
 {
 	safe_x = x
 	safe_y = y
 }
 
-if place_meeting(x,y,parWater) && !global.water_armor
-	in_water = true
-else
-	in_water = false
-	
-if place_meeting(x,y,parSticky)
-	in_water = true
+in_water = (place_meeting(x,y,parWater) && !global.water_armor) || place_meeting(x,y,parSticky);
 	
 //constant physics
 yspeed_accel = 0.2
@@ -65,14 +59,11 @@ if in_water
 }
 
 //can control?
-if ( !hurting && !attacking && !sliding && !dashing && !pounding )
-	can_control = true
-else
-	can_control = false
+can_control = !( hurting || attacking || sliding || dashing || pounding );
+//Use the Inverse Law to reduce the number of NOT operators
 
 //trails
-trail_counter += 1
-if trail_counter >= 2
+if ++trail_counter >= 2
 {
 	trail_counter = 0
 	if pounding or dashing or sliding
@@ -84,7 +75,7 @@ if hurting
 {
 	if hurt_time > 0
 		hurt_time += -1
-	if hurt_time <= 0 && on_ground() = true
+	if hurt_time <= 0 && on_ground()
 	{
 		whipping = false
 		attacking = false
@@ -110,5 +101,5 @@ if hurting
 	if hazard_damage
 		xspeed = 0
 }
-if i_frames > 0
-	i_frames -= 1
+
+i_frames = max(i_frames - 1, 0);

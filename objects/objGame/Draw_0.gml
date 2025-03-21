@@ -4,11 +4,11 @@ scrViewData();
 var _text = string(global.hearts) + "/" + string(global.hearts_max);
 var _sprite = hud_sprite[ds_map_find_value(global.savedata,"spiciness")];
 
-draw_sprite(sprHUDSubweapons,global.current_subweapon,xview + 2,yview + 2);
-draw_sprite(sprHUDWhip,global.current_whip,xview + wview - 2 - 24,yview + 2);
-
 draw_sprite_stretched(_sprite, 0, xview + 2,yview + 2, (global.hp_max * 4) + sprite_get_width(_sprite) - 4, sprite_get_height(_sprite));
 draw_sprite_stretched(sprHealthbar, 0, xview + 2 + 40,yview + 2 + 9, global.hp * sprite_get_width(sprHealthbar), sprite_get_height(sprHealthbar));
+
+draw_sprite(sprHUDSubweapons,global.current_subweapon,xview + 2,yview + 2);
+draw_sprite(sprHUDWhip,global.current_whip,xview + wview - 2 - 24,yview + 2);
 
 draw_set_font(fntHUD);
 draw_set_halign(fa_left);
