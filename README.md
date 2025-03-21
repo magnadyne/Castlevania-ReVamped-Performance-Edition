@@ -2,6 +2,7 @@
  The Performance version of Castlevania ReVamped!
  
  Originally created by **William ''Lv.4 WALL'' Perez**
+ 
  Enchanced by **MagnaDev**
 
 ----------------------------------------------------------------
@@ -13,8 +14,9 @@ Various performance enchanments have been applied to reduce the CPU and GPU work
 
 Here are the current stats when testing in the first room of the game:
 
-BEFORE: 1400~ FPS real
-AFTER:  2400~ FPS real
+BEFORE: 1400~ fps_real
+
+AFTER: 2400~ fps_real
 
 ----------------------------------------------------------------
 RULES FOR USE:
