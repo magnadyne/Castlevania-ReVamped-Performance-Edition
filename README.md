@@ -1,10 +1,20 @@
-# Castlevania-ReVamped-Open-Source-Edition
- The Open-Source version of Castlevania ReVamped!
+# Castlevania-ReVamped-Performance-Edition
+ The Performance version of Castlevania ReVamped!
+ 
+ Originally created by **William ''Lv.4 WALL'' Perez**
+ Enchanced by **MagnaDev**
 
 ----------------------------------------------------------------
 WHAT IS THIS?
 
-This is the open-source edition of Castlevania ReVamped; free for use in any mods of the game, or for use as a base for other projects. This project should be modified or compiled with the most up-to-date version of Game Maker.
+This is a fork of the open-source edition of Castlevania ReVamped; free for use in any mods of the game, or for use as a base for other projects. This project should be modified or compiled with the most up-to-date version of Game Maker.
+
+Various performance enchanments have been applied to reduce the CPU and GPU workload.
+
+Here are the current stats when testing in the first room of the game:
+
+BEFORE: 1400~ FPS real
+AFTER:  2400~ FPS real
 
 ----------------------------------------------------------------
 RULES FOR USE:
@@ -18,7 +28,7 @@ RULES FOR USE:
 ----------------------------------------------------------------
 NEED HELP?
 
-I am aware that I am a really bad coder. In my opinion, if the code works, then it's fine. However, I fully expect people may have questions as to how this game's engine functions and how to use it. Please direct these inquiries to the Dev Corner's #source-code-help channel in the official Castlevania ReVamped Discord server:
+Please direct these inquiries to the Dev Corner's #source-code-help channel in the official Castlevania ReVamped Discord server:
 
 https://discord.com/invite/gRqkXbCeDA
 
