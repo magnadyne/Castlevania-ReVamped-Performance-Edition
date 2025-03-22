@@ -3,7 +3,7 @@
  
  Originally created by **William ''Lv.4 WALL'' Perez**
  
- Enchanced by **MagnaDev**
+ Optimized by **MagnaDev**
 
 ----------------------------------------------------------------
 WHAT IS THIS?
@@ -16,7 +16,7 @@ Here are the current stats when testing in the first room of the game:
 
 BEFORE: 1400~ fps_real
 
-AFTER: 2400~ fps_real
+AFTER: 2700~ fps_real
 
 ----------------------------------------------------------------
 RULES FOR USE:
