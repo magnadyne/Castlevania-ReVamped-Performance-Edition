@@ -1,5 +1,5 @@
 /// @description file independent variables + BGM loop points
-global.options = ds_map_create()
+global.options = ds_map_create();
 
 //load options
 if (!file_exists("Castlevania_Options.sav"))
@@ -67,4 +67,11 @@ else
 //First Init the System, specify the name of the pal swap shader in case you've changed it for some reason.
 pal_swap_init_system(shd_pal_swapper);
 
-set_loop_points()
+set_loop_points();
+
+if (!window_get_fullscreen())
+{
+	alarm[0] = game_get_speed(gamespeed_fps) / 5;
+	//Center the window 1/5 a second later.
+	//It has to be delayed else it won't work.
+}

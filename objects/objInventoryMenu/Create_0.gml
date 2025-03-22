@@ -34,10 +34,5 @@ enemy_string = 0
 boss_string = 0
 completion_string = 0
 
-enemy = global.enemy_collection
-boss = global.boss_collection
-
-if enemy = undefined
-	enemy = 0
-if boss = undefined
-	boss = 0
+enemy = global.enemy_collection ?? 0;
+boss = global.boss_collection ?? 0;

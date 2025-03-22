@@ -5,11 +5,11 @@ function instance_create(inst_x, inst_y, instance)
 
 function scrViewData()
 {/// @function scrViewData();
-	xview = camera_get_view_x(view_camera)
-	yview = camera_get_view_y(view_camera)
-	wview = camera_get_view_width(view_camera)
-	hview = camera_get_view_height(view_camera)
-	windowscale = 1 //ds_map_find_value(global.options,"windowscale")
+	xview = camera_get_view_x(view_camera[0]);
+	yview = camera_get_view_y(view_camera[0]);
+	wview = camera_get_view_width(view_camera[0]);
+	hview = camera_get_view_height(view_camera[0]);
+	windowscale = 1; //ds_map_find_value(global.options,"windowscale")
 }
 
 function frame_count()

@@ -16,10 +16,7 @@ if visiboo
 		{
 			drawtile = "column" + string(drawColumn) + "_" + "row" + string(drawRow) + "_" + "area0";
 			
-			tileimage = ds_map_find_value(global.savedata, drawtile)
-			
-			if tileimage = undefined
-				tileimage = 0				
+			tileimage = ds_map_find_value(global.savedata, drawtile) ?? 0;	
 			
 			draw_sprite(sprMapTile,tileimage,(drawColumn*6) + xview + global.mapoff_x, (drawRow*6) + yview + global.mapoff_y )
 			

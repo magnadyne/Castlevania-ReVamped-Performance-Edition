@@ -4,7 +4,7 @@ cameraX = round( random_range(-shakeAmount,shakeAmount) );
 
 
 //xview = camera_get_view_x(view_camera)
-yview = camera_get_view_y(view_camera)
+yview = camera_get_view_y(view_camera[0])
 
-camera_set_view_speed(view_camera,0,storespeed)
-camera_set_view_pos(view_camera,xview+cameraX,yview)
+camera_set_view_speed(view_camera[0],0,storespeed)
+camera_set_view_pos(view_camera[0],xview+cameraX,yview)
