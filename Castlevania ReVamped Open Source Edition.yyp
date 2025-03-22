@@ -1335,6 +1335,7 @@
     {"id":{"name":"palGlobalBright","path":"sprites/palGlobalBright/palGlobalBright.yy",},},
     {"id":{"name":"palSimon","path":"sprites/palSimon/palSimon.yy",},},
     {"id":{"name":"scribble_fallback_bulletpoint","path":"sprites/scribble_fallback_bulletpoint/scribble_fallback_bulletpoint.yy",},},
+    {"id":{"name":"spr_outlineFont","path":"sprites/spr_outlineFont/spr_outlineFont.yy",},},
     {"id":{"name":"sprAimLock","path":"sprites/sprAimLock/sprAimLock.yy",},},
     {"id":{"name":"sprAreaDoor","path":"sprites/sprAreaDoor/sprAreaDoor.yy",},},
     {"id":{"name":"sprAreaDoorClose","path":"sprites/sprAreaDoorClose/sprAreaDoorClose.yy",},},
@@ -2094,5 +2095,6 @@
     {"$GMTextureGroup":"","%Name":"tex_mummy","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"name":"tex_mummy","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
     {"$GMTextureGroup":"","%Name":"tex_creature","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"name":"tex_creature","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
     {"$GMTextureGroup":"","%Name":"tex_fountain","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"name":"tex_fountain","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMTextureGroup":"","%Name":"tex_palette","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"name":"tex_palette","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
   ],
 }

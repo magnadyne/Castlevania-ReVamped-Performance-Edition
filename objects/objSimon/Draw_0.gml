@@ -45,7 +45,7 @@ if (!attacking)
 	{
 		sprite_set(sDash,0);
 		
-		image_index = ceil(dash_counter % 1)
+		image_index = ceil(dash_counter % 2);
 			
 		if (dash_counter > 20)
 		{
@@ -138,14 +138,14 @@ if (hurting)
 
 current_pal = (global.water_armor ? 1 : 0);
 
-if (i_frames % 1 == 0)
+if (i_frames % 2 == 0)
 {
 	draw_palette_ext(palSimon,current_pal,x,y);
 }
 	
 if (hurt_time > 6 && !hazard_damage)
 {
-	draw_palette_ext(palGlobal,7 + ceil(hurt_time % 1),x,y);
+	draw_palette_ext(palGlobal,7 + ceil(hurt_time % 2),x,y);
 }
 
 #endregion

@@ -10,27 +10,25 @@ draw_sprite_stretched(sprHealthbar, 0, xview + 2 + 40,yview + 2 + 9, global.hp *
 draw_sprite(sprHUDSubweapons,global.current_subweapon,xview + 2,yview + 2);
 draw_sprite(sprHUDWhip,global.current_whip,xview + wview - 2 - 24,yview + 2);
 
-draw_set_font(fntHUD);
+draw_set_font(global.fntOutlineHUD);
 draw_set_halign(fa_left);
 
-draw_text_outline_fast(xview + 2 + 42,yview + 2 + 17,c_black,c_white,_text);
+draw_text(xview + 2 + 42,yview + 2 + 17,_text);
 
-_text = "$ " + string(global.gold);
+_text = "$  " + string(global.gold);
 
-draw_text_outline_fast(xview + 2 + 32 ,yview + 2 + 25,c_black,c_white,_text);
-
-//nes_colors()
+draw_text(xview + 2 + 32 ,yview + 2 + 25,_text);
 
 //debug text
 if (debug_mode)
 {
 	if (round(fps) < 60)
 	{
-		draw_text_outline_fast( xview + wview - 32,yview + hview - 8,c_black,nes_red,round(fps));	
+		draw_text_color( xview + wview - 32,yview + hview - 8,round(fps),nes_red,nes_red,nes_red,nes_red,1);	
 	}
 	if (global.mx == 0 && global.my == 0)
 	{
-		draw_text_outline_fast(xview + 8,yview + hview - 8,c_black,nes_red,"Map coordinates not set");
+		draw_text_color(xview + 8,yview + hview - 8,"Map coordinates not set",nes_red,nes_red,nes_red,nes_red,1);
 	}
 }
 	

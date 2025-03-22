@@ -16,7 +16,7 @@
 }
 #endregion
 
-#region Constants Messages
+#region Globals
 {
 	global.message_lifemaxup = @"LIFE MAX UP
 	Maximum HP increased by 1. HP fully restored."
@@ -24,6 +24,10 @@
 	global.message_waterarmor = @"AQUATIC ARMOR
 	Allows full range of movement in water. Ability to wall-jump, dash and double-jump underwater restored."
 	//These are messages that never change
+	
+	global.fntOutlineHUD = font_add_sprite_ext(spr_outlineFont, " abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ*0123456789[]()!?<>;:+-,'&^{}|/._$#`@%", true, 0);
+	//Use this to draw outlined text instead of fntHUD.
+	//It only requires 1 draw function, whereas fntHUD would've required 9.
 }
 #endregion
 

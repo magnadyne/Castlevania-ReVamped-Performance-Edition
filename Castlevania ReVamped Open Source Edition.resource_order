@@ -1189,6 +1189,7 @@
     {"name":"palGlobalBright","order":2,"path":"sprites/palGlobalBright/palGlobalBright.yy",},
     {"name":"palSimon","order":1,"path":"sprites/palSimon/palSimon.yy",},
     {"name":"scribble_fallback_bulletpoint","order":11,"path":"sprites/scribble_fallback_bulletpoint/scribble_fallback_bulletpoint.yy",},
+    {"name":"spr_outlineFont","order":1,"path":"sprites/spr_outlineFont/spr_outlineFont.yy",},
     {"name":"sprAimLock","order":39,"path":"sprites/sprAimLock/sprAimLock.yy",},
     {"name":"sprAreaDoor","order":1,"path":"sprites/sprAreaDoor/sprAreaDoor.yy",},
     {"name":"sprAreaDoorClose","order":2,"path":"sprites/sprAreaDoorClose/sprAreaDoorClose.yy",},
