@@ -21,13 +21,13 @@ function bitBGM(BGM)
 	if argument0 = bgmYouGoddamnedBathead && global.boss_rush
 		exit;
 	//copy paste the rest of this to another game lol
-	set_loop_points()
+
 	if !audio_is_playing(argument0) && !audio_is_playing(bgmFanfarePlayerMiss)
 	{
 		audio_stop_all()
 		audio_play_sound(argument0,1,true,global.volumeBGM)
 	}
-	if player_exists() = true
+	if player_exists()
 	{
 		if global.timestop > 0
 			audio_pause_sound(argument0)

@@ -184,8 +184,8 @@ function pal_swap_set(palette_sprite_index, palette_index,paletteisSurface)
 		    shader_set_uniform_f(Pal_Index, _pal_index);
 		}
 		else
-		{   //Using a surface based palette
-		    var tex = surface_get_texture(_pal_sprite);
+		{   //Using a sprite based palette
+		    var tex = sprite_get_texture(_pal_sprite);
     
 		    texture_set_stage(Pal_Texture, tex);
 		    //texture_set_interpolation_ext(Pal_Texture, 1)

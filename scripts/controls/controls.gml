@@ -1,3 +1,4 @@
+// Feather disable all
 function scrControls()
 {//controls
 	kLeft = input_check("left");

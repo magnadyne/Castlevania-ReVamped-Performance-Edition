@@ -1,7 +1,9 @@
 /// @description choose whip
-scrControls()
+
 if !selected
 {
+	scrControls()
+	
 	if kSwap or kCancel
 	{
 		if global.vibration input_vibrate_constant(0.5,0,5)

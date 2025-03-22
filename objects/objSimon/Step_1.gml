@@ -2,7 +2,7 @@
 
 var _grounded = on_ground();
 
-scrControls();
+scrControlsFast();
 
 if (_grounded && !hurting && !ducking && can_control && i_frames == 0 && !hazard_damage && yspeed == 0 && !place_meeting(x,y,parSolid) && !place_meeting(x,y+1,objConveyorBelt) && !place_meeting(x,y+1,objUnsafeBlock))
 {

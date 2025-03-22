@@ -34,9 +34,15 @@
 
 function in_view()
 {
-	scrViewData();
+	var _xv = camera_get_view_x(view_camera[0]);
+	var _yv = camera_get_view_y(view_camera[0]);
+	//Dynamic - constantly changing
 	
-	return (x > xview -16 && x < xview + wview + 16 && y > yview - 8 && y < yview + hview + 8)
+	static _wv = camera_get_view_width(view_camera[0]) + 16;
+	static _hv = camera_get_view_height(view_camera[0]) + 8;
+	//Static - unchanging
+	
+	return ((x > _xv - 16) && (x < _xv + _wv) && (y > _yv - 8) && (y < _yv + _hv))
 	//This logic simplifies into a boolean, so we can return it without using an IF statement.
 }
 
@@ -184,4 +190,120 @@ function item_messages()
 		global.message_superslide = @"SPIKED BOOTS
 		A faster slide move with minor offensive capability. Destroys certain kinds of blocks. Hold " + _down + " and press " + _jump +  " while on the ground. Hold " + _down + " to slide continuously."
 	}
+}
+
+//This only works if it is called once per frame.
+//Give it to Simon, and no one else.
+// Feather disable all
+function scrControlsFast()
+{
+	static _up = 0;
+	static _down = 0;
+	static _left = 0;
+	static _right = 0;
+	static _jump = 0;
+	static _pause = 0;
+	static _attack = 0;
+	
+	//0 = Not pressed
+	//1 = Intial press
+	//2 = Still pressed, waiting for release
+	
+	kPauseHold = input_check("pause");
+	kAttackHold= input_check("attack");
+	
+	kUp= input_check("up");
+	kDown= input_check("down");
+	kLeft = input_check("left");
+	kRight= input_check("right");
+	kSubweapon = input_check_pressed("subweapon");
+	kDash = input_check("dash");
+	kSwap = input_check_pressed("swap");
+	kAimLock = input_check("aimlock");
+	kAccept= input_check_pressed("accept");
+	kCancel= input_check_pressed("cancel");
+	kMap= input_check_pressed("map");
+	
+	#region Determine press & release using check
+	{
+		if (input_check("jump"))
+		{
+			if (_jump == 0) _jump = 1;
+			else if (_jump == 1) _jump = 2;
+			
+			kJumpRelease = false;
+		}
+		else if (_jump != 0)
+		{
+			_jump = 0;
+			
+			kJumpRelease = true;
+		}
+		
+		if (kAttackHold)
+		{
+			if (_attack == 0) _attack = 1;
+			else if (_attack == 1) _attack = 2;
+		}
+		else if (_attack != 0) _attack = 0;
+		
+		if (kPauseHold)
+		{
+			if (_pause == 0) _pause = 1;
+			else if (_pause == 1) _pause = 2;
+		}
+		else if (_pause != 0) _pause = 0;
+		
+		if (kUp)
+		{
+			if (_up == 0) _up = 1;	
+			else if (_up == 1) _up = 2;		
+		}
+		else
+		{
+			_up = 0;	
+		}
+	
+		if (kDown)
+		{
+			if (_down == 0) _down = 1;	
+			else if (_down == 1) _down = 2;		
+		}
+		else
+		{
+			_down = 0;	
+		}
+	
+		if (kLeft)
+		{
+			if (_left == 0) _left = 1;	
+			else if (_left == 1) _left = 2;		
+		}
+		else
+		{
+			_left = 0;	
+		}
+	
+		if (kRight)
+		{
+			if (_right == 0) _right = 1;	
+			else if (_right == 1) _right = 2;		
+		}
+		else
+		{
+			_right = 0;	
+		}
+	}
+	//Doing this saves 7 input calls
+	//TL;DR This boolean logic is MUCH faster than input functions
+
+	kJump = (_jump == 1);
+	kPause = (_pause == 1);
+	kAttack = (_attack == 1);
+
+	//tapping, for menus
+	kUpTap = (_up == 1);
+	kDownTap = (_down == 1);
+	kLeftTap = (_left == 1);
+	kRightTap = (_right == 1);
 }

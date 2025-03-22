@@ -18,3 +18,4 @@ entry_pic = 0
 scroll = 0
 scrub = 0
 
+scrControls();

@@ -1,5 +1,5 @@
 /// @description control the entries + deactivate
-scrControls()
+
 
 if kCancel && visible
 	alarm[0] = 1

@@ -1,7 +1,9 @@
 /// @description draw ya face
-scrViewData()
+
 if visiboo
 {
+	scrViewData();
+	
 	draw_sprite(sprite_index,image_index,x,y)
 	
 	if ds_map_find_value(global.savedata,"corpse map x") != undefined && ds_map_find_value(global.savedata,"corpse map y") != undefined

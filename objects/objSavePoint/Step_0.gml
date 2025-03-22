@@ -1,5 +1,5 @@
 /// @description change sprite
-scrControls()
+
 if saved
 {
 	if place_meeting(x,y,parPlayer)
@@ -7,7 +7,7 @@ if saved
 	else
 		sprite_index = sprSaveUsed	
 		
-	if kUpTap && place_meeting(x,y,parPlayer)
+	if input_check("up") && place_meeting(x,y,parPlayer)
 	{
 		instance_create(x,y,objCardsMenu)
 		alarm[0] = 5

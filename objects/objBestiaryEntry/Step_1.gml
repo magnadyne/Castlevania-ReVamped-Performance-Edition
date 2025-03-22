@@ -7,3 +7,8 @@ if global.view_entry && !visible
 	scroll = 0
 	deactivate()
 }
+
+if (visible)
+{
+	scrControls();	
+}

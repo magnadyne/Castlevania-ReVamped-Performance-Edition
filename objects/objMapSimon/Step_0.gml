@@ -1,9 +1,8 @@
 /// @description mapscreen toggling
-scrControls()
 
-if kMap && !global.boss_rush
+if input_check_pressed("map") && !global.boss_rush
 {
-	if visiboo = false
+	if !visiboo
 	{
 		bitsound(sndMenuPause)
 		parMap.visiboo = true

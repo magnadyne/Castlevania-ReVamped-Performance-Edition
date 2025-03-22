@@ -1,5 +1,4 @@
 /// @description calculate cost of warping
-scrControls()
 
 if global.warptime = true
 {
@@ -13,15 +12,18 @@ if global.warptime = true
 	parMap.visiboo = true
 }
 
-if kCancel && visible = true
+if (!visible) exit;
+
+scrControls();
+
+if kCancel
 {
 	bitsound(sndDoor)
 	visible = false
 	instance_activate_all()
 	parMap.visiboo = false
 }
-
-if visible
+else
 {
 	//normal selection values
 	if kLeftTap && selection > 0 
