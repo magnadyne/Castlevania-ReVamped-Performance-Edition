@@ -48,6 +48,10 @@ JupiterClimb
 Spriven
 
 
+[[ OPTIMIZATION ]
+MagnaDev
+
+
 ALL OTHER ASSETS ARE
 DERIVED WORK OF KONAMI
 

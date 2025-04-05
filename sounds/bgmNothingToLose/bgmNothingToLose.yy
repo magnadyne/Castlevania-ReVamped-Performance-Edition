@@ -7,7 +7,7 @@
   },
   "bitDepth":1,
   "bitRate":512,
-  "compression":0,
+  "compression":3,
   "conversionMode":0,
   "duration":173.808,
   "name":"bgmNothingToLose",

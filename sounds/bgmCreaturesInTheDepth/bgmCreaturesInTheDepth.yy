@@ -7,7 +7,7 @@
   },
   "bitDepth":1,
   "bitRate":512,
-  "compression":0,
+  "compression":1,
   "conversionMode":0,
   "duration":101.52,
   "name":"bgmCreaturesInTheDepth",
