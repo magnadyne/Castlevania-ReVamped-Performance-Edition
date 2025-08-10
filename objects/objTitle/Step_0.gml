@@ -6,16 +6,10 @@ if instance_number(objFadeInShutter) = 0 && image_index != 10
 
 if image_index >= 3
 {
-	if kDownTap && selection < 2
+	if ((kDownTap || kUpTap) && (selection < 2))
 	{
-		bitsound(sndWeaponWhip)
-		selection = 1
-	}
-
-	if kUpTap && selection < 2
-	{
-		bitsound(sndWeaponWhip)
-		selection = 0
+		bitsound(sndWeaponWhip);
+		selection = (selection * -1) + 1;
 	}
 
 	if kAccept or kPause
