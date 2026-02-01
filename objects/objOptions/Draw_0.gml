@@ -1,11 +1,14 @@
 /// @description the menu
-scrViewData()
-draw_set_font(fntMessage)
-draw_set_halign(fa_left)
-draw_set_color(c_white)
-//nes_colors()
 
-vibratetext = "";
+var crttext = "";
+var SFXtext = "";
+var BGMtext = "";
+var vsynctxt = "";
+var vibratetext = "";
+var fullscreentext = "Fullscreen - [Off]   On ";
+var windowtext = "Window Scale - " + string(ds_map_find_value(global.options,"windowscale"));
+
+draw_set_font(fntMessage);
 
 if global.volumeBGM = undefined
 	global.volumeBGM = 1
@@ -19,8 +22,7 @@ if ds_map_find_value(global.options,"windowscale") = undefined
 if ds_map_find_value(global.options,"fullscreen") = undefined
 		ds_map_replace(global.options,"fullscreen",false)
 		
-windowtext = "Window Scale - " + string(ds_map_find_value(global.options,"windowscale"))
-fullscreentext = "Fullscreen - [Off]   On "
+
 if ds_map_find_value(global.options,"fullscreen") = true
 	fullscreentext = "Fullscreen -  Off   [On]"
 	
@@ -36,6 +38,11 @@ if global.crt
 	crttext = "CRT Filter -  Off   [On]"
 else
 	crttext = "CRT Filter - [Off]   On "
+	
+if global.vsync
+	vsynctxt = "VSYNC -  Off   [On]"
+else
+	vsynctxt = "VSYNC - [Off]   On "
 
 draw_text(x,y,SFXtext)
 draw_text(x,y + 16,BGMtext)
@@ -47,7 +54,8 @@ draw_text(x,y + 96,"Credits")
 draw_text(x,y + 112,windowtext)
 draw_text(x,y + 128,fullscreentext)
 draw_text(x,y + 144,crttext)
-draw_text(x,y + 160,"Back")
+draw_text(x,y + 160,vsynctxt)
+draw_text(x,y + 176,"Back")
 
 draw_set_color(nes_yellow)
 
@@ -72,4 +80,8 @@ if selection = 8
 if selection = 9
 	draw_text(x,y + 144,crttext)
 if selection = 10
-	draw_text(x,y + 160,"Back")
+	draw_text(x,y + 160,vsynctxt)
+if selection = 11
+	draw_text(x,y + 176,"Back")
+
+draw_set_color(c_white);

@@ -45,16 +45,8 @@ if (can_control)
 	{
 		walkspeed *= duck_factor;
 	}
-		
-	if (xspeed > walkspeed) //limit walkspeed
-	{
-		xspeed = walkspeed;
-	}
-	if (xspeed < -walkspeed)
-	{
-		xspeed = -walkspeed;
-	}
-	//This logic is very strange, and I think adding an "else" would break it.
+	
+	xspeed = clamp(xspeed, -walkspeed, walkspeed); //limit walkspeed
 		
 	if (kDown && _grounded && !kAimLock) //ducking
 	{
@@ -65,7 +57,7 @@ if (can_control)
 		ducking = false;
 	}
 		
-	if (kJump && _grounded && !ducking or (on_wall && global.walljump && !_grounded)) //jumping + dubble jumping + walljump takeoff
+	if (kJump && ((_grounded && !ducking) or (on_wall && global.walljump && !_grounded))) //jumping + dubble jumping + walljump takeoff
 	{
 		if (on_wall)
 		{
@@ -243,29 +235,10 @@ if (can_control)
 	
 	if (kSwap) //whip swappin'
 	{
+		kSwap = false;
+		
 		bitsound(sndPickupMoney);
 		instance_create(x,y,objWhipMenu);
-	}
-		
-	if (global.morningstar)
-	{
-		global.current_whip = 1;
-	}
-	else if (global.flame_whip)
-	{
-		global.current_whip = 2;
-	}
-	else if (global.ice_whip)
-	{
-		global.current_whip = 3;
-	}
-	else if (global.thunder_whip)
-	{
-		global.current_whip = 4;
-	}
-	else 
-	{
-		global.current_whip = 0;	
 	}
 	
 	if (kSubweapon && global.current_subweapon > 0) //subweapons
@@ -446,7 +419,14 @@ if (dashing) //slow and return from slide
 	
 	if (dash_counter >= 12)
 	{
-		xspeed *= 0.9;
+		if (kDash)
+		{
+			dash_counter = 0;
+		}
+		else
+		{
+			xspeed *= 0.9;
+		}
 	}
 	
 	if (abs(xspeed) < 1 && dash_counter >= 30 && !kDash)
@@ -592,7 +572,12 @@ y = clamp(y, -8, room_height + 8);
 
 #endregion
 
-//{//aim lock
-//	if kAimLock && whipping
-//		xspeed *= 0.25
-//}
+if (debug_mode)
+{
+	if (keyboard_check_pressed(vk_f1))
+	{
+		instance_change(objPortableSimon,true);
+	}
+	//Move this here to save an input check.
+	//Doing it like this means the input is only checked if running in the debugger.
+}

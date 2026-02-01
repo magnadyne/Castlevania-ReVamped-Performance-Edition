@@ -5,17 +5,18 @@ bitBGM(bgmUnderground)
 if kUpTap
 {
 	bitsound(sndWeaponWhip)
-	selection += -1
-	if selection <= 0
-		selection = 0
+		
+	if (--selection < 0)
+	{
+		selection = 11;	
+	}
 }
 
 if kDownTap
 {
 	bitsound(sndWeaponWhip)
-	selection += 1
-	if selection >= 10
-		selection = 10
+	
+	selection = (selection + 1) % 12;
 }
 
 //set options
@@ -58,6 +59,12 @@ if kRightTap
 			ds_map_replace(global.options,"crt",true)
 			global.crt = true
 		}
+	if selection = 10 //vsync
+		{
+			ds_map_replace(global.options,"vsync",true)
+			display_reset(0, true)
+			global.vsync = true
+		}
 }
 
 if kLeftTap
@@ -99,6 +106,13 @@ if kLeftTap
 			ds_map_replace(global.options,"crt",false)
 			global.crt = false
 		}
+		
+	if selection = 10 //vsync
+		{
+			ds_map_replace(global.options,"vsync",false)
+			display_reset(0, false)
+			global.vsync = false
+		}
 }
 
 if kAccept //control customizing, default values, credits, or leave
@@ -129,7 +143,7 @@ if kAccept //control customizing, default values, credits, or leave
 		ds_map_secure_save(global.options,"Castlevania_Options.sav")
 		room_goto(rmCreditsOptions)
 	}
-	if selection = 10 //exit
+	if selection = 11 //exit
 	{
 		ds_map_secure_save(global.options,"Castlevania_Options.sav")
 		room_goto(rmFileSelect)

@@ -2,8 +2,7 @@
 eyesight = 96
 active = false
 
-with( parGate )
-	x = -64
+alarm[3] = 1;
 
 delete_if_collected()
 

@@ -18,6 +18,7 @@ scrControls();
 
 if kCancel
 {
+	io_clear()
 	bitsound(sndDoor)
 	visible = false
 	instance_activate_all()

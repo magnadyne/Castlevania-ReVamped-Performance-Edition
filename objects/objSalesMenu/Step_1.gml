@@ -1,6 +1,12 @@
 /// @description select & purchase cards
 scrControls()
 
+if (kCancel or kPause)
+{
+	alarm[0] = 1;
+	exit;
+}
+
 if kUpTap && selection > 0
 	{selection -= 1 bitsound(sndWeaponWhip)}
 if kDownTap && selection < 18

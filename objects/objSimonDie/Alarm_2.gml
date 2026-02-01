@@ -1,6 +1,8 @@
 /// @description gold and corpse run
 with( instance_create_depth(x,y,0,objMoneyLostPopup) )
+{
 	bag = round(global.gold/2)
+}
 	
 scrViewData()
 

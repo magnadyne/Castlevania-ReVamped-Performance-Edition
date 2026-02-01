@@ -3,9 +3,13 @@ scrControls()
 
 if kCancel && !deleted
 	{
-		audio_stop_all()
-		bitsound(sndThudWet)
-		title_screen()
+		audio_stop_all();
+		bitsound(sndThudWet);
+		instance_destroy();
+		
+		show_debug_message(instance_count)
+		
+		room_goto(rmSplash);
 	}
 	
 if kCancel && deleted
@@ -23,20 +27,21 @@ if kCancel && deleted
 global.fileselect = selection 
 
 if kDownTap
-	{
-	selection += 1	
-	if selection > 5
-		selection = 5
-	bitsound(sndWeaponWhip)
-	}
+{
+	selection = (selection + 1) % 6;
+	
+	bitsound(sndWeaponWhip);
+}
 	
 if kUpTap
+{
+	if (--selection < 0)
 	{
-	selection += -1
-	if selection < 0
-		selection = 0
-	bitsound(sndWeaponWhip)
+		selection = 5;	
 	}
+	
+	bitsound(sndWeaponWhip);
+}
 	
 if kAccept	//&& can_load //load or new game or go to a menu
 	{

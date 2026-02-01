@@ -26,9 +26,9 @@ if global.dash
 if global.super_slide 
 	super_slide_string = "Spiked Boots\n"
 
-whips_string = "WHIPS\n-----\n"+string(morningstar_string) + string(flame_whip_string) + string(ice_whip_string) + string(thunder_whip_string)
-abilities_string = "ABILITIES\n---------\n"+string(whip_aim_string) + string(dubble_jump_string) + string(ground_pound_string) + string(water_armor_string)
-boots_string = "BOOTS\n-----\n" + string(slide_string) + string(walljump_string) + string(dash_string) + string(super_slide_string)
+whips_string = "WHIPS\n-----\n"+ (morningstar_string) + (flame_whip_string) + (ice_whip_string) + (thunder_whip_string)
+abilities_string = "ABILITIES\n---------\n"+ (whip_aim_string) + (dubble_jump_string) + (ground_pound_string) + (water_armor_string)
+boots_string = "BOOTS\n-----\n" + (slide_string) + (walljump_string) + (dash_string) + (super_slide_string)
 
 description_string = "????????????"
 

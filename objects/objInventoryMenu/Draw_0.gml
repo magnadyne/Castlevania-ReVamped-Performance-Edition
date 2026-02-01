@@ -12,7 +12,7 @@ draw_set_font(fntMessage)
 
 draw_set_halign(fa_center)
 
-draw_text_outline(xview+200,yview+8,c_white,nes_yellow,"INVENTORY")
+draw_text_outline(xview+200,yview+8,c_black,nes_yellow,"INVENTORY")
 
 draw_text_outline(xview + 200,yview+224 - 10,c_black,nes_red,completion_string)
 
@@ -28,12 +28,13 @@ draw_text_outline(xview + 120 + 8, yview + 64, c_black, c_white,abilities_string
 draw_text_outline(xview + 232 + 16, yview + 64, c_black, c_white,boots_string)
 
 if selection <= 3
-	draw_sprite(sprSelector,0,xview,yview + 80 + ( selection * 8 ) )
+	draw_sprite(sprSelector,0,xview,yview + 83 + ( selection * 9 ) )
 	
 if selection <= 7 && selection > 3
-	draw_sprite(sprSelector,0,xview + 112 + 8,yview + 80 + ( (selection-4) * 8 ) )
+	draw_sprite(sprSelector,0,xview + 112 + 8,yview + 83 + ( (selection-4) * 9 ) )
 
 if selection > 7
-	draw_sprite(sprSelector,0,xview + 224 + 16,yview + 80 + ( (selection-8) * 8 ) )
+	draw_sprite(sprSelector,0,xview + 224 + 16,yview + 83 + ( (selection-8) * 9 ) )
 	
 
+draw_set_color(c_white);

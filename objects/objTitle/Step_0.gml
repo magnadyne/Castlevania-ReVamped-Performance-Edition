@@ -6,23 +6,28 @@ if instance_number(objFadeInShutter) = 0 && image_index != 10
 
 if image_index >= 3
 {
-	if ((kDownTap || kUpTap) && (selection < 2))
+	if (!loading)
 	{
-		bitsound(sndWeaponWhip);
-		selection = (selection * -1) + 1;
-	}
-
-	if kAccept or kPause
-	{
-		bitsound(sndMenuSelect)
-		if selection = 0
+		if ((kDownTap || kUpTap) && (selection < 2))
 		{
-			alarm[0] = 60
-			audio_stop_sound(bgmCastlevania)
-			selection = 2
+			bitsound(sndWeaponWhip);
+			selection = (selection * -1) + 1;
 		}
-		if selection = 1
-			game_end()
+
+		if kAccept or kPause
+		{
+			loading = true;
+		
+			bitsound(sndMenuSelect)
+			if selection = 0
+			{
+				alarm[0] = 60
+				audio_stop_sound(bgmCastlevania)
+				selection = 2
+			}
+			if selection = 1
+				game_end()
+		}
 	}
 
 	if selection >= 2

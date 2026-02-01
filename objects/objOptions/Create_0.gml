@@ -1,8 +1,6 @@
 /// @description setup 
-selection = 0
-SFXtext = "0%"
-BGMtext = "0%"
-vibratetext = "Hey Ho"
-scrViewData()
+selection = 0;
 
-instance_create(x,y,objFadeInShutter)
+scrViewData();
+
+instance_create(x,y,objFadeInShutter);

@@ -9,6 +9,7 @@ gpu_set_blendmode(bm_subtract)
 draw_set_color(c_black)
 draw_sprite(sprSpriteShutters,floor(fadeframe/5),sprite_get_xoffset(sprSpriteShutters),sprite_get_yoffset(sprSpriteShutters))
 gpu_set_blendmode(bm_normal)
+draw_set_color(c_white)
 
 surface_reset_target();
 
