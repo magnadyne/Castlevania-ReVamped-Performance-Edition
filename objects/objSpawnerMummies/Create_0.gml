@@ -2,8 +2,6 @@
 eyesight = 96
 active = false
 
-alarm[3] = 1;
-
 delete_if_collected()
 
 image_xscale = 1

@@ -1,10 +1,36 @@
 function load_game()
 {
-	if (!file_exists(global.filename))
-		exit;
+	show_debug_message(current_time)
 	
-	ds_map_destroy(global.savedata)
-	global.savedata = ds_map_secure_load(global.filename)
+	try
+	{
+		//We're using a try-catch so forget about the safety checks and just do it.
+		//This is in case something doesn't save correctly and the UNI save corrupts.
+		
+		var _file = file_text_open_read("UNI_" + global.filename);
+		
+		var _string = file_text_read_string(_file);
+		
+		file_text_close(_file);
+		
+		if (!ds_exists(global.savedata, ds_type_map))
+		{
+			global.savedata  = ds_map_create();	
+		}
+		
+		ds_map_read(global.savedata, _string);
+	}
+	catch (_e)
+	{
+		if (!file_exists(global.filename))
+		{
+			exit;
+		}
+	
+		ds_map_destroy(global.savedata);
+		
+		global.savedata = ds_map_secure_load(global.filename);
+	}
 	
 	global.hp_max = ds_map_find_value(global.savedata,"hp_max")
 	global.hearts = ds_map_find_value(global.savedata,"hearts")

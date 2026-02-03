@@ -40,36 +40,69 @@ deleted2 = false
 bossrush_record = ds_map_find_value(global.gallery,"record")
 
 //load file info
-if (!file_exists("Simon0.sav"))
-	simon0_new = true
-else
+
+var _num = 0;
+var _map = noone;
+
+for (var _a = 0; _a < 3; _a++)
 {
-	simon0 = ds_map_secure_load("Simon0.sav")
+	_num = string(_a);
 	
+	try
+	{
+		//We're using a try-catch so forget about the safety checks and just do it.
+		//This is in case something doesn't save correctly and the UNI save corrupts.
+		
+		var _file = file_text_open_read("UNI_Simon" + _num + ".sav");
+		
+		var _string = file_text_read_string(_file);
+		
+		file_text_close(_file);
+		
+		_map = ds_map_create();
+		
+		variable_instance_set(id, "simon" + _num, _map);
+		
+		ds_map_read(_map, _string);
+		
+		show_debug_message("Loaded Universal File: " + _num);
+	}
+	catch (_e)
+	{
+		if (file_exists("Simon" + _num + ".sav"))
+		{
+			variable_instance_set(id, "simon" + _num, ds_map_secure_load("Simon" + _num + ".sav"));
+			
+			show_debug_message("Loaded Legacy File: " + _num);
+		}
+		else
+		{
+			variable_instance_set(id, "simon" + _num + "_new", true);
+			
+			show_debug_message("No File: " + _num);
+		}
+	}
+}
+
+
+if (!simon0_new)
+{
 	simon0_collection = ds_map_find_value(simon0,"collection")
 	simon0_area = ds_map_find_value(simon0,"area")
 	simon0_hours = ds_map_find_value(simon0,"hours")
 	simon0_minutes = ds_map_find_value(simon0,"minutes")
 }
 
-if (!file_exists("Simon1.sav"))
-	simon1_new = true
-else
+if (!simon1_new)
 {
-	simon1 = ds_map_secure_load("Simon1.sav")
-
 	simon1_collection = ds_map_find_value(simon1,"collection")
 	simon1_area = ds_map_find_value(simon1,"area")
 	simon1_hours = ds_map_find_value(simon1,"hours")
 	simon1_minutes = ds_map_find_value(simon1,"minutes")
 }
 
-if (!file_exists("Simon2.sav"))
-	simon2_new = true
-else
+if (!simon2_new)
 {
-	simon2 = ds_map_secure_load("Simon2.sav")
-	
 	simon2_collection = ds_map_find_value(simon2,"collection")
 	simon2_area = ds_map_find_value(simon2,"area")
 	simon2_hours = ds_map_find_value(simon2,"hours")

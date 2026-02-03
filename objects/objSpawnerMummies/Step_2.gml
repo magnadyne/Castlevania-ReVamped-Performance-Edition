@@ -14,7 +14,15 @@ if mummy_order = 0
 	{
 		active = true
 		alarm[0] = 120
-		with( parGate ) 
-			x = xstart
+		
+		var _layer = layer_get_id("Instances");
+
+		instance_create_layer(16, 160, _layer, objGateMummies);
+		instance_create_layer(16, 176, _layer, objGateMummies);
+		instance_create_layer(16, 192, _layer, objGateMummies);
+		
+		instance_create_layer(368, 160, _layer, objGateMummies);
+		instance_create_layer(368, 176, _layer, objGateMummies);
+		instance_create_layer(368, 192, _layer, objGateMummies);
 	}
 }

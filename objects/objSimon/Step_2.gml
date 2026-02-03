@@ -419,11 +419,7 @@ if (dashing) //slow and return from slide
 	
 	if (dash_counter >= 12)
 	{
-		if (kDash)
-		{
-			dash_counter = 0;
-		}
-		else
+		if (!kDash)
 		{
 			xspeed *= 0.9;
 		}
@@ -443,7 +439,7 @@ if (dashing) //slow and return from slide
 		dash_counter = 0;
 	}
 	
-	if (abs(xspeed) < 2 && dash_counter >= 15 && kDash) // allow early repeat if holding
+	if (dash_counter >= 15 && kDash) // allow early repeat if holding
 	{
 		if (kLeft)
 		{
@@ -454,23 +450,23 @@ if (dashing) //slow and return from slide
 			facing = 1;
 		}
 		
-		if (global.meteordash_card == 2 && dash_counter > 20)
-		{
-			instance_create(x,y,objMeteorDash);
-		}
+		//if (global.meteordash_card == 2 && dash_counter > 20)
+		//{
+		//	instance_create(x,y,objMeteorDash);
+		//}
 		
 		bitsound(sndSimonDash);
 		
 		dash_counter = 0;
 		dashing = true;
-		xspeed = dashspeed * facing;
 		
 		if (on_wall)
 		{
-			xspeed *= -1;
 			facing *= -1;
 			on_wall = false;
 		}
+		
+		xspeed = dashspeed * facing;
 	}
 	
 	if (global.dubble_jump && kJump && !_grounded && !dubble_jumped && !on_wall && !in_water)//&& yspeed >=0
