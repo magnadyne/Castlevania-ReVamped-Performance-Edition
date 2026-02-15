@@ -1,5 +1,27 @@
 /// @description file independent variables + BGM loop points
-global.options = ds_map_create();
+
+
+if (!ds_exists(global.options, ds_type_map))
+{
+	//If it doesn't exist, then this is the first run.	
+	
+	set_loop_points();
+
+	if (!window_get_fullscreen())
+	{
+		alarm[0] = game_get_speed(gamespeed_fps) / 5;
+		//Center the window 1/5 a second later.
+		//It has to be delayed else it won't work.
+	}
+	
+	global.options = ds_map_create();
+}
+else
+{
+	ds_map_clear(global.options);	
+	
+	//I don't think we should re-read the options everytime, but this is how the game was setup to function.
+}
 
 //load options
 if (!file_exists("Castlevania_Options.sav"))
@@ -50,7 +72,14 @@ if ds_map_find_value(global.options,"controls") != undefined
 	input_system_import(ds_map_find_value(global.options,"controls"))
 	
 //load ending cards
-global.gallery = ds_map_create()
+if (!ds_exists(global.gallery, ds_type_map))
+{
+	global.gallery = ds_map_create();
+}
+else
+{
+	ds_map_clear(global.gallery);	
+}
 
 if (!file_exists("Castlevania_Endings.sav"))
 {
@@ -66,20 +95,7 @@ if (!file_exists("Castlevania_Endings.sav"))
 else
 	global.gallery = ds_map_secure_load("Castlevania_Endings.sav")
 
-///@description Initilize System and add palettes
-
-//This should be done before any drawing takes place 
-//in a managing object that will persist through the entire game.
-//Notice I've set it to persistent.  
+//ds_map_set(global.gallery,"bossrush", 1);
 
 //First Init the System, specify the name of the pal swap shader in case you've changed it for some reason.
 pal_swap_init_system(shd_pal_swapper);
-
-set_loop_points();
-
-if (!window_get_fullscreen())
-{
-	alarm[0] = game_get_speed(gamespeed_fps) / 5;
-	//Center the window 1/5 a second later.
-	//It has to be delayed else it won't work.
-}

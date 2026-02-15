@@ -1,6 +1,6 @@
 /// @description scroll up and shit
 if y > -500
-	y -= 0.5
+	y -= 0.25
 else
 	leave += 1
 	

@@ -35,7 +35,7 @@ if (debug_mode)
 //boss rush timer
 if (global.boss_rush)
 {
-	_text = append_zero(global.hours) + ":" + append_zero(global.u) + ":" + append_zero(global.seconds);
+	_text = append_zero(global.hours) + ":" + append_zero(global.minutes) + ":" + append_zero(global.seconds);
 	
 	draw_set_halign(fa_center);
 	draw_set_font(fntMessage);

@@ -82,6 +82,10 @@ for (var _a = 0; _a < 3; _a++)
 			show_debug_message("No File: " + _num);
 		}
 	}
+	//Using the variable_instance funtions allows us to shrink alot of code into a single loop.
+	//Though, for something small like this, I would usually recommend against it.
+	//This method will always be slower than simply writing out all of the variables and setting them.
+	//But I'm being lazy and cannot be bothered to write all that 3 times.
 }
 
 

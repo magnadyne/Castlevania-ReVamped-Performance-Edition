@@ -18,6 +18,9 @@
 
 #region Globals
 {
+	global.options = noone;
+	global.gallery = noone;
+	
 	global.message_lifemaxup = @"LIFE MAX UP
 	Maximum HP increased by 1. HP fully restored."
 

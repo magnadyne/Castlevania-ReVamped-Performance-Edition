@@ -1,7 +1,5 @@
 function load_game()
 {
-	show_debug_message(current_time)
-	
 	try
 	{
 		//We're using a try-catch so forget about the safety checks and just do it.
