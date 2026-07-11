@@ -256,7 +256,7 @@ if (can_control)
 		//actual subweapon input and spawning!
 		if (global.hearts >= global.subweapon_cost && can_subweapon)
 		{
-			var throw_y = -4;
+			throw_y = -4;
 			var sub_obj = objKnife;
 			
 			if (global.vibration)

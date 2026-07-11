@@ -9,6 +9,9 @@ depth = 0
 
 global.richard = false
 
+throw_y = -4;
+//Referenced by objKnife
+
 sploosh = false
 hazard_damage = false
 safe_x = 0

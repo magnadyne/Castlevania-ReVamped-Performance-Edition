@@ -8,9 +8,9 @@
 ----------------------------------------------------------------
 WHAT IS THIS?
 
-This is a fork of the open-source edition of Castlevania ReVamped; free for use in any mods of the game, or for use as a base for other projects. This project should be modified or compiled with the most up-to-date version of Game Maker.
+This is a fork of the open-source edition of Castlevania ReVamped; free for use in any mods of the game, or for use as a base for other projects. This project currently uses Runtime v2024.11.0.226
 
-Various performance enchanments have been applied to reduce the CPU and GPU workload.
+Various performance enchanments have been applied to reduce the CPU and GPU workload, as well as RAM usage.
 
 Here are the current stats when testing in the first room of the game:
 
