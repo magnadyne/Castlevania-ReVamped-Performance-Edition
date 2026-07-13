@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"OLD TV Filter Sprites",
-    "path":"folders/CRT/Sprites/Vortex Game Studios/OLD TV Filter Sprites.yy",
+    "name":"Sprites",
+    "path":"folders/CRT/Sprites.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

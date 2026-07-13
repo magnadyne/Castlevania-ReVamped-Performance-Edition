@@ -22,7 +22,7 @@ function __input_finalize_verb_groups()
         _global.__default_player.__verb_group_ensure(_group_name);
         
         var _p = 0;
-        repeat(INPUT_MAX_PLAYERS)
+        repeat(INPUT_MAX_PLAYERS_FIX)
         {
             _global.__players[_p].__verb_group_ensure(_group_name);
             ++_p;

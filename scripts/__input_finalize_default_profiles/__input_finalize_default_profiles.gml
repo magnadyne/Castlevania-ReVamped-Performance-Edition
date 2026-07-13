@@ -129,7 +129,7 @@ function __input_finalize_default_profiles()
         var _profile_struct = _global.__default_profile_dict[$ _profile_name];
         
         var _p = 0;
-        repeat(INPUT_MAX_PLAYERS)
+        repeat(INPUT_MAX_PLAYERS_FIX)
         {
             _global.__players[_p].__profile_ensure(_profile_name);
             ++_p;
@@ -155,7 +155,7 @@ function __input_finalize_default_profiles()
             }
             
             var _p = 0;
-            repeat(INPUT_MAX_PLAYERS)
+            repeat(INPUT_MAX_PLAYERS_FIX)
             {
                 _global.__players[_p].__verb_ensure(_profile_name, _verb_name);
                 ++_p;

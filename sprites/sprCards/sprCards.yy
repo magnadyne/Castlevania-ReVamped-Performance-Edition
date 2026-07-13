@@ -157,8 +157,8 @@
   "swatchColours":null,
   "swfPrecision":2.525,
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"tex_ui",
+    "path":"texturegroups/tex_ui",
   },
   "type":0,
   "VTile":false,

@@ -9,8 +9,8 @@
   "name":"obj_OLDTVFilter_PresetBase",
   "overriddenProperties":[],
   "parent":{
-    "name":"OLD TV Filter Presets",
-    "path":"folders/CRT/Objects/Vortex Game Studios/OLD TV Filter Presets.yy",
+    "name":"Objects",
+    "path":"folders/CRT/Objects.yy",
   },
   "parentObjectId":null,
   "persistent":true,

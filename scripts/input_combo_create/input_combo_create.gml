@@ -36,7 +36,7 @@ function input_combo_create(_name, _phase_timeout = INPUT_COMBO_DEFAULT_PHASE_TI
     
     //Add this chord definition to all players
     var _p = 0;
-    repeat(INPUT_MAX_PLAYERS)
+    repeat(INPUT_MAX_PLAYERS_FIX)
     {
         with(_global.__players[_p])
         {

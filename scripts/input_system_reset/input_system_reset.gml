@@ -4,7 +4,7 @@
 function input_system_reset()
 {
     var _p = 0;
-    repeat(INPUT_MAX_PLAYERS)
+    repeat(INPUT_MAX_PLAYERS_FIX)
     {
         input_player_reset(_p);
         ++_p;

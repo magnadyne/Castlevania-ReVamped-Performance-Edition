@@ -36,7 +36,7 @@
 
 //Whether to allow using Steamworks extension when available
 //This feature requires the Steamworks extension: https://github.com/YoYoGames/GMEXT-Steamworks
-#macro INPUT_ALLOW_STEAMWORKS  true
+#macro INPUT_ALLOW_STEAMWORKS  false
 
 //Time (in milliseconds) to wait for a new binding before automatically cancelling the binding scan
 #macro INPUT_BINDING_SCAN_TIMEOUT  10000

@@ -10,24 +10,26 @@
 function input_check_pressed(_verb, _player_index = 0, _buffer_duration = 0)
 {
     __INPUT_GLOBAL_STATIC_LOCAL  //Set static _global
-    __INPUT_VERIFY_PLAYER_INDEX
+    //__INPUT_VERIFY_PLAYER_INDEX
     
-    if (_verb == all)
-    {
-        return input_check_pressed(_global.__basic_verb_array, _player_index, _buffer_duration);
-    }
+    //if (_verb == all)
+    //{
+    //    return input_check_pressed(_global.__basic_verb_array, _player_index, _buffer_duration);
+    //}
+	//not used
     
-    if (is_array(_verb))
-    {
-        var _i = 0;
-        repeat(array_length(_verb))
-        {
-            if (input_check_pressed(_verb[_i], _player_index, _buffer_duration)) return true;
-            ++_i;
-        }
+    //if (is_array(_verb))
+    //{
+    //    var _i = 0;
+    //    repeat(array_length(_verb))
+    //    {
+    //        if (input_check_pressed(_verb[_i], _player_index, _buffer_duration)) return true;
+    //        ++_i;
+    //    }
         
-        return false;
-    }
+    //    return false;
+    //}
+	//not used
     
     __INPUT_GET_VERB_STRUCT
     

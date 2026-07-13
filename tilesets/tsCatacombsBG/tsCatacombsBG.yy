@@ -9,8 +9,8 @@
   },
   "name":"tsCatacombsBG",
   "out_columns":8,
-  "out_tilehborder":2,
-  "out_tilevborder":2,
+  "out_tilehborder":1,
+  "out_tilevborder":1,
   "parent":{
     "name":"6. TILE",
     "path":"folders/6. TILE.yy",
@@ -21,24 +21,14 @@
     "name":"sprCatacombsTilesBG",
     "path":"sprites/sprCatacombsTilesBG/sprCatacombsTilesBG.yy",
   },
-  "spriteNoExport":false,
+  "spriteNoExport":true,
   "textureGroupId":{
     "name":"Default",
     "path":"texturegroups/Default",
   },
   "tileAnimationFrames":[
-    {"$GMTileAnimation":"","%Name":"waterfall","frames":[
-        32,
-        34,
-        35,
-        36,
-      ],"name":"waterfall","resourceType":"GMTileAnimation","resourceVersion":"2.0",},
-    {"$GMTileAnimation":"","%Name":"watertrickle","frames":[
-        40,
-        42,
-        43,
-        44,
-      ],"name":"watertrickle","resourceType":"GMTileAnimation","resourceVersion":"2.0",},
+    {"$GMTileAnimation":"","%Name":"waterfall","frames":[32,34,35,36,],"name":"waterfall","resourceType":"GMTileAnimation","resourceVersion":"2.0",},
+    {"$GMTileAnimation":"","%Name":"watertrickle","frames":[40,42,43,44,],"name":"watertrickle","resourceType":"GMTileAnimation","resourceVersion":"2.0",},
   ],
   "tileAnimationSpeed":10.0,
   "tileHeight":16,

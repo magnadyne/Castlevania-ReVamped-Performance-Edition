@@ -15,7 +15,7 @@ function input_cursor_elastic_set(_x, _y, _strength, _player_index = 0, _move_cu
     if (_player_index == all)
     {
         var _p = 0;
-        repeat(INPUT_MAX_PLAYERS)
+        repeat(INPUT_MAX_PLAYERS_FIX)
         {
             input_cursor_elastic_set(_x, _y, _strength, _p, _move_cursor);
             ++_p;

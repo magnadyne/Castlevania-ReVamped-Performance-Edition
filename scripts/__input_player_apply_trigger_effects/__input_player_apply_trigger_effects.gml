@@ -6,7 +6,7 @@ function __input_player_apply_trigger_effects(_player_index)
     if (_player_index == all)
     {
         var _i = 0;
-        repeat(INPUT_MAX_PLAYERS)
+        repeat(INPUT_MAX_PLAYERS_FIX)
         {
             __input_player_apply_trigger_effects(_i);
             ++_i;

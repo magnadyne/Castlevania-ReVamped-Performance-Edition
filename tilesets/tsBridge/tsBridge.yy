@@ -9,8 +9,8 @@
   },
   "name":"tsBridge",
   "out_columns":10,
-  "out_tilehborder":2,
-  "out_tilevborder":2,
+  "out_tilehborder":1,
+  "out_tilevborder":1,
   "parent":{
     "name":"6. TILE",
     "path":"folders/6. TILE.yy",
@@ -21,7 +21,7 @@
     "name":"sprBridgeTiles",
     "path":"sprites/sprBridgeTiles/sprBridgeTiles.yy",
   },
-  "spriteNoExport":false,
+  "spriteNoExport":true,
   "textureGroupId":{
     "name":"Default",
     "path":"texturegroups/Default",

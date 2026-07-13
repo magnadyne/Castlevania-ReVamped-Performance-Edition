@@ -12,7 +12,7 @@ function input_cursor_set(_x, _y, _player_index = 0, _relative = false)
     if (_player_index == all)
     {
         var _p = 0;
-        repeat(INPUT_MAX_PLAYERS)
+        repeat(INPUT_MAX_PLAYERS_FIX)
         {
             input_cursor_set(_x, _y, _p, _relative);
             ++_p;

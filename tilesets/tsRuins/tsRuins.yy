@@ -9,8 +9,8 @@
   },
   "name":"tsRuins",
   "out_columns":9,
-  "out_tilehborder":2,
-  "out_tilevborder":2,
+  "out_tilehborder":1,
+  "out_tilevborder":1,
   "parent":{
     "name":"6. TILE",
     "path":"folders/6. TILE.yy",
@@ -21,7 +21,7 @@
     "name":"sprRuinsTiles",
     "path":"sprites/sprRuinsTiles/sprRuinsTiles.yy",
   },
-  "spriteNoExport":false,
+  "spriteNoExport":true,
   "textureGroupId":{
     "name":"Default",
     "path":"texturegroups/Default",

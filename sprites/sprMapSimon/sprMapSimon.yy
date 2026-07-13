@@ -94,8 +94,8 @@
   "swatchColours":null,
   "swfPrecision":2.525,
   "textureGroupId":{
-    "name":"tex_map",
-    "path":"texturegroups/tex_map",
+    "name":"tex_ui",
+    "path":"texturegroups/tex_ui",
   },
   "type":0,
   "VTile":false,

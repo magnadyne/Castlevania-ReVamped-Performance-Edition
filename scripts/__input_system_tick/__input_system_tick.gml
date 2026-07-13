@@ -23,7 +23,7 @@ function __input_system_tick()
     //}
 	//Touchpad input is set to false
 
-    if (_global.__touch_allowed)
+    if (_global.__touch_allowed && os_type == os_android)
     {
         var _touch_index = undefined;
         var _touch_press_index = _global.__pointer_pressed_index;
@@ -145,23 +145,23 @@ function __input_system_tick()
     }
     
     _global.__overlay_focus = false;
-    if (_global.__using_steamworks)
-    {
-        //Steam overlay
-        if (steam_is_overlay_activated())
-        {
-            _global.__overlay_focus = true;
-        }
-    }
+    //if (_global.__using_steamworks)
+    //{
+    //    //Steam overlay
+    //    if (steam_is_overlay_activated())
+    //    {
+    //        _global.__overlay_focus = true;
+    //    }
+    //}
     
-    if (_global.__use_debug_overlay_status)
-    {
-        //Debug overlay
-        if (is_debug_overlay_open())
-        {
-            _global.__overlay_focus = true;
-        }
-    }
+    //if (_global.__use_debug_overlay_status)
+    //{
+    //    //Debug overlay
+    //    if (is_debug_overlay_open())
+    //    {
+    //        _global.__overlay_focus = true;
+    //    }
+    //}
     
     _global.__game_focus = (INPUT_ALLOW_OUT_OF_FOCUS || (_global.__window_focus && !_global.__overlay_focus));
     
@@ -373,75 +373,75 @@ function __input_system_tick()
     #region Keyboard
     
     //Unstick
-    if (_global.__keyboard_allowed && keyboard_check(vk_anykey))
-    {
-        var _platform = os_type;
-        if (INPUT_ON_WEB && __INPUT_ON_APPLE) _platform = "apple_web";
+    //if (_global.__keyboard_allowed && keyboard_check(vk_anykey))
+    //{
+    //    var _platform = os_type;
+    //    if (INPUT_ON_WEB && __INPUT_ON_APPLE) _platform = "apple_web";
 
-        switch(_platform)
-        {
-            case os_windows:
-                if (keyboard_check(vk_alt) && keyboard_check_pressed(vk_space))
-                {
-                    //Unstick Alt Space
-                    keyboard_key_release(vk_alt);
-                    keyboard_key_release(vk_space);
-                    keyboard_key_release(vk_lalt);
-                    keyboard_key_release(vk_ralt);
-                }
+    //    switch(_platform)
+    //    {
+    //        case os_windows:
+    //            if (keyboard_check(vk_alt) && keyboard_check_pressed(vk_space))
+    //            {
+    //                //Unstick Alt Space
+    //                keyboard_key_release(vk_alt);
+    //                keyboard_key_release(vk_space);
+    //                keyboard_key_release(vk_lalt);
+    //                keyboard_key_release(vk_ralt);
+    //            }
 
-                if (keyboard_check(0xE6) && !keyboard_check_pressed(0xE6))
-                {
-                    //Unstick OEM key (Power button on Steam Deck)
-                    keyboard_key_release(0x0E6);
-                }
-            break;            
-            case "apple_web": //This case applies on iOS, tvOS, and MacOS
-                if (keyboard_check_released(vk_lmeta) || keyboard_check_released(vk_rmeta))
-                {
-                    //Meta release sticks every key pressed during hold
-                    //This is "the nuclear option", but the problem is severe
-                    var _i = 8;
-                    var _len = 255 - _i;
-                    repeat(_len)
-                    {
-                        keyboard_key_release(_i);
-                        ++_i;
-                    }
-                }
-            break;                
-            case os_macosx:
-                //Unstick doubled-up control keys
-                if (keyboard_check_released(vk_control))
-                {
-                    keyboard_key_release(vk_lcontrol);
-                    keyboard_key_release(vk_rcontrol);
-                }
+    //            if (keyboard_check(0xE6) && !keyboard_check_pressed(0xE6))
+    //            {
+    //                //Unstick OEM key (Power button on Steam Deck)
+    //                keyboard_key_release(0x0E6);
+    //            }
+    //        break;            
+    //        case "apple_web": //This case applies on iOS, tvOS, and MacOS
+    //            if (keyboard_check_released(vk_lmeta) || keyboard_check_released(vk_rmeta))
+    //            {
+    //                //Meta release sticks every key pressed during hold
+    //                //This is "the nuclear option", but the problem is severe
+    //                var _i = 8;
+    //                var _len = 255 - _i;
+    //                repeat(_len)
+    //                {
+    //                    keyboard_key_release(_i);
+    //                    ++_i;
+    //                }
+    //            }
+    //        break;                
+    //        case os_macosx:
+    //            //Unstick doubled-up control keys
+    //            if (keyboard_check_released(vk_control))
+    //            {
+    //                keyboard_key_release(vk_lcontrol);
+    //                keyboard_key_release(vk_rcontrol);
+    //            }
             
-                if (keyboard_check_released(vk_shift))
-                {
-                    keyboard_key_release(vk_lshift);
-                    keyboard_key_release(vk_rshift);
-                }
+    //            if (keyboard_check_released(vk_shift))
+    //            {
+    //                keyboard_key_release(vk_lshift);
+    //                keyboard_key_release(vk_rshift);
+    //            }
             
-                if (keyboard_check_released(vk_alt))
-                {
-                    keyboard_key_release(vk_lalt);
-                    keyboard_key_release(vk_ralt);
-                }
+    //            if (keyboard_check_released(vk_alt))
+    //            {
+    //                keyboard_key_release(vk_lalt);
+    //                keyboard_key_release(vk_ralt);
+    //            }
             
-                //Unstick Meta
-                if (keyboard_check_released(vk_lmeta))
-                {
-                    keyboard_key_release(vk_rmeta);
-                }
-                else if (keyboard_check_released(vk_rmeta) && keyboard_check(vk_lmeta))
-                {
-                    keyboard_key_release(vk_lmeta);
-                }
-            break;
-        }
-    }
+    //            //Unstick Meta
+    //            if (keyboard_check_released(vk_lmeta))
+    //            {
+    //                keyboard_key_release(vk_rmeta);
+    //            }
+    //            else if (keyboard_check_released(vk_rmeta) && keyboard_check(vk_lmeta))
+    //            {
+    //                keyboard_key_release(vk_lmeta);
+    //            }
+    //        break;
+    //    }
+    //}
     
     #endregion
     
@@ -514,7 +514,7 @@ function __input_system_tick()
                     if ((_global.__source_mode != INPUT_SOURCE_MODE.MIXED) && (_global.__source_mode != INPUT_SOURCE_MODE.MULTIDEVICE))
                     {                    
                         var _p = 0;
-                        repeat(INPUT_MAX_PLAYERS)
+                        repeat(INPUT_MAX_PLAYERS_FIX)
                         {
                             with(_global.__players[_p])
                             {
@@ -551,12 +551,14 @@ function __input_system_tick()
     
     #region Players
     
-    var _p = 0;
-    repeat(INPUT_MAX_PLAYERS)
-    {
-        _global.__players[_p].tick();
-        ++_p;
-    }
+    //var _p = 0;
+    //repeat(INPUT_MAX_PLAYERS_FIX)
+    //{
+    //    _global.__players[_p].tick();
+    //    ++_p;
+    //}
+	
+	_global.__players[0].tick();
     
     #endregion
     
@@ -632,7 +634,7 @@ function __input_system_tick()
     array_resize(_disconnection_array, 0);
     
     var _p = 0;
-    repeat(INPUT_MAX_PLAYERS)
+    repeat(INPUT_MAX_PLAYERS_FIX)
     {
         var _old_status = _status_array[_p];
         
@@ -745,8 +747,8 @@ function __input_system_tick()
     
     
     
-    if (_global.__allow_gamepad_tester && _global.__gamepad_tester_data.__enabled)
-    {
-        __input_gamepad_tester_tick();
-    }
+    //if (_global.__allow_gamepad_tester && _global.__gamepad_tester_data.__enabled)
+    //{
+    //    __input_gamepad_tester_tick();
+    //}
 }

@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_OLDTVFilter_Setup",
   "parent":{
-    "name":"OLD TV Filter Scripts",
-    "path":"folders/CRT/Scripts/Vortex Game Studios/OLD TV Filter Scripts.yy",
+    "name":"Scripts",
+    "path":"folders/CRT/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

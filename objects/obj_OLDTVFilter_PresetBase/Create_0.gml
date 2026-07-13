@@ -61,3 +61,5 @@ global.tube_mask = sprite_get_texture(sprMaskWide1,0);
 global.tube_distortion = 0.3;              // -1.0 ~ 1.0
 
 script_execute( scr_OLDTVFilter_Setup );
+
+sprite_index = -1;	//	hide preset icon

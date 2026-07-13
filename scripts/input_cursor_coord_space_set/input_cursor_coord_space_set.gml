@@ -14,7 +14,7 @@ function input_cursor_coord_space_set(_coord_space, _player_index = 0)
     if (_player_index == all)
     {
         var _p = 0;
-        repeat(INPUT_MAX_PLAYERS)
+        repeat(INPUT_MAX_PLAYERS_FIX)
         {
             input_cursor_coord_space_set(_coord_space, _p);
             ++_p;

@@ -9,7 +9,7 @@ function input_source_clear(_player_index = 0)
     if (_player_index == all)
     {
         var _i = 0;
-        repeat(INPUT_MAX_PLAYERS)
+        repeat(INPUT_MAX_PLAYERS_FIX)
         {
             _global.__players[_i].__sources_clear();
             ++_i;

@@ -6,7 +6,7 @@ function __input_source_relinquish(_source)
     __INPUT_GLOBAL_STATIC_LOCAL  //Set static _global
     
     var _i = 0;
-    repeat(INPUT_MAX_PLAYERS)
+    repeat(INPUT_MAX_PLAYERS_FIX)
     {
         _global.__players[_i].__source_remove(_source);
         ++_i;

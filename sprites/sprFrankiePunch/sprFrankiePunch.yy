@@ -85,8 +85,8 @@
   "swatchColours":null,
   "swfPrecision":2.525,
   "textureGroupId":{
-    "name":"tex_creature",
-    "path":"texturegroups/tex_creature",
+    "name":"tex_golem_creature",
+    "path":"texturegroups/tex_golem_creature",
   },
   "type":0,
   "VTile":false,

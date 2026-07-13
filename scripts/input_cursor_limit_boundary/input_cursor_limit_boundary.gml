@@ -10,7 +10,7 @@ function input_cursor_limit_boundary(_margin = 0, _player_index = 0)
     if (_player_index == all)
     {
         var _p = 0;
-        repeat(INPUT_MAX_PLAYERS)
+        repeat(INPUT_MAX_PLAYERS_FIX)
         {
             input_cursor_limit_boundary(_p);
             ++_p;

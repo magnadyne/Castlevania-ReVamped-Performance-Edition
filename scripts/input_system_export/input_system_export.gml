@@ -26,7 +26,7 @@ function input_system_export(_output_string = true, _prettify = false)
     };
     
     var _p = 0;
-    repeat(INPUT_MAX_PLAYERS)
+    repeat(INPUT_MAX_PLAYERS_FIX)
     {
         with(_global.__players[_p]) _players_array[@ _p] = __export();
         ++_p;

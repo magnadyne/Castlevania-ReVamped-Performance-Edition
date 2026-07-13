@@ -12,7 +12,7 @@ function input_verb_consume(_verb, _player_index = 0)
     if (_player_index == all)
     {
         var _i = 0;
-        repeat(INPUT_MAX_PLAYERS)
+        repeat(INPUT_MAX_PLAYERS_FIX)
         {
             input_verb_consume(_verb, _i);
             ++_i;

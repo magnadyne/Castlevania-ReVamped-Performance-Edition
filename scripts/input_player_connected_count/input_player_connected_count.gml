@@ -8,7 +8,7 @@ function input_player_connected_count(_include_ghosts = true)
     
     var _count = 0;
     var _p = 0;
-    repeat(INPUT_MAX_PLAYERS)
+    repeat(INPUT_MAX_PLAYERS_FIX)
     {
         with(_global.__players[_p])
         {

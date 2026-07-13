@@ -14,7 +14,7 @@ function input_cursor_gyro_params_set(_gyro_axis_x = undefined, _gyro_axis_y = u
     if (_player_index == all)
     {
         var _p = 0;
-        repeat(INPUT_MAX_PLAYERS)
+        repeat(INPUT_MAX_PLAYERS_FIX)
         {
             input_cursor_gyro_params_set(_gyro_axis_x, _gyro_axis_y, _gyro_sensitivity_x, _gyro_sensitivity_y, _p, _gamepad);
             ++_p;

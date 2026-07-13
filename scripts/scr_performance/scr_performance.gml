@@ -209,27 +209,31 @@ function scrControlsFast()
 	static _left = 0;
 	static _right = 0;
 	static _jump = 0;
-	static _pause = 0;
+	//static _pause = 0;
 	static _attack = 0;
 	
 	//0 = Not pressed
 	//1 = Intial press
 	//2 = Still pressed, waiting for release
 	
-	kPauseHold = input_check("pause");
-	kAttackHold= input_check("attack");
 	
-	kUp= input_check("up");
-	kDown= input_check("down");
+	kAttackHold = input_check("attack");
+	
+	kUp = input_check("up");
+	kDown = input_check("down");
 	kLeft = input_check("left");
-	kRight= input_check("right");
+	kRight = input_check("right");
 	kSubweapon = input_check_pressed("subweapon");
 	kDash = input_check("dash");
 	kSwap = input_check_pressed("swap");
 	kAimLock = input_check("aimlock");
-	kAccept= input_check_pressed("accept");
-	kCancel= input_check_pressed("cancel");
-	kMap= input_check_pressed("map");
+	
+	
+	//Unused by simon
+	//kMap = input_check_pressed("map");
+	//kPauseHold = input_check("pause");
+	//kAccept= input_check_pressed("accept");
+	//kCancel= input_check_pressed("cancel");
 	
 	#region Determine press & release using check
 	{
@@ -254,12 +258,12 @@ function scrControlsFast()
 		}
 		else if (_attack != 0) _attack = 0;
 		
-		if (kPauseHold)
-		{
-			if (_pause == 0) _pause = 1;
-			else if (_pause == 1) _pause = 2;
-		}
-		else if (_pause != 0) _pause = 0;
+		//if (kPauseHold)
+		//{
+		//	if (_pause == 0) _pause = 1;
+		//	else if (_pause == 1) _pause = 2;
+		//}
+		//else if (_pause != 0) _pause = 0;
 		
 		if (kUp)
 		{
@@ -305,7 +309,7 @@ function scrControlsFast()
 	//TL;DR This boolean logic is MUCH faster than input functions
 
 	kJump = (_jump == 1);
-	kPause = (_pause == 1);
+	//kPause = (_pause == 1);
 	kAttack = (_attack == 1);
 
 	//tapping, for menus

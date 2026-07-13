@@ -1,6 +1,5 @@
 /// @description file independent variables + BGM loop points
 
-
 if (!ds_exists(global.options, ds_type_map))
 {
 	//If it doesn't exist, then this is the first run.	

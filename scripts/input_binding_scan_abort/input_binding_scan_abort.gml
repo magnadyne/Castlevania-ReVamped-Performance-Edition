@@ -9,7 +9,7 @@ function input_binding_scan_abort(_player_index = 0)
     if (_player_index == all)
     {
         var _p = 0;
-        repeat(INPUT_MAX_PLAYERS)
+        repeat(INPUT_MAX_PLAYERS_FIX)
         {
             input_binding_scan_abort(_p);
             ++_p;

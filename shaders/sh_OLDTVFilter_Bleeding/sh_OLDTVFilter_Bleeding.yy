@@ -3,8 +3,8 @@
   "%Name":"sh_OLDTVFilter_Bleeding",
   "name":"sh_OLDTVFilter_Bleeding",
   "parent":{
-    "name":"OLD TV Filter Shaders",
-    "path":"folders/CRT/Shaders/Vortex Game Studios/OLD TV Filter Shaders.yy",
+    "name":"Shaders",
+    "path":"folders/CRT/Shaders.yy",
   },
   "resourceType":"GMShader",
   "resourceVersion":"2.0",

@@ -360,7 +360,7 @@ function __input_initialize()
     _global.__players = array_create(INPUT_MAX_PLAYERS, undefined);
     
     var _p = 0;
-    repeat(INPUT_MAX_PLAYERS)
+    repeat(INPUT_MAX_PLAYERS) //Don't change
     {
         with(new __input_class_player())
         {

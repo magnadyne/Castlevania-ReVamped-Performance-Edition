@@ -10,7 +10,7 @@ function input_trigger_effect_set_strength(_strength, _player_index = 0)
     if (_player_index == all)
     {
         var _i = 0;
-        repeat(INPUT_MAX_PLAYERS)
+        repeat(INPUT_MAX_PLAYERS_FIX)
         {
             input_trigger_effect_set_strength(_strength, _i);
             ++_i;

@@ -11,7 +11,7 @@ function input_vibrate_set_pause(_state, _player_index = 0)
     if (_player_index == all)
     {
         var _i = 0;
-        repeat(INPUT_MAX_PLAYERS)
+        repeat(INPUT_MAX_PLAYERS_FIX)
         {
             input_vibrate_set_pause(_state, _i);
             ++_i;
