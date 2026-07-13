@@ -16,7 +16,7 @@ Here are the current stats when testing in the first room of the game:
 
 BEFORE: 1400~ fps_real
 
-AFTER: 3300~ fps_real
+AFTER: 4000~ fps_real
 
 ----------------------------------------------------------------
 RULES FOR USE:
